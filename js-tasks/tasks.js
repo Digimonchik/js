@@ -79,23 +79,31 @@
 // console.log("undefined < 0:", undefined < 0);
 // console.log("undefined > 0:", undefined > 0);
 
-console.log("false || true:", false || true);
-console.log("false || true || false:", false || true || false);
-console.log("false || false || false:", false || false || false);
-console.log("false && true:", false && true);
-console.log("false && true && false:", false && true && false);
-console.log("true && true && true:",true && true && true);
-console.log("'text' || false:", 'text' || false);
-console.log("true || 'text':", true || 'text');
-console.log("undefined || null || 0 || '' || null:",undefined || null || 0 || '' || null);
-const customAmount = null; // не выводим
-const defaultAmount = 17; // не выводим
-const amount = customAmount || defaultAmount; 
-console.log('amount:', amount);
-console.log("'text' && false:", 'text' && false);
-console.log("true && 'text':",true && 'text');
-console.log("undefined && null && 0 && '' && null:", undefined && null && 0 && '' && null);
-console.log("!true:", !true);
-console.log("!false:", !false);
-console.log("!'text':", !'text');
-console.log("!!'text':", !!'text');
+// console.log("false || true:", false || true);
+// console.log("false || true || false:", false || true || false);
+// console.log("false || false || false:", false || false || false);
+// console.log("false && true:", false && true);
+// console.log("false && true && false:", false && true && false);
+// console.log("true && true && true:",true && true && true);
+// console.log("'text' || false:", 'text' || false);
+// console.log("true || 'text':", true || 'text');
+// console.log("undefined || null || 0 || '' || null:",undefined || null || 0 || '' || null);
+// const customAmount = null; // не выводим
+// const defaultAmount = 17; // не выводим
+// const amount = customAmount || defaultAmount; 
+// console.log('amount:', amount);
+// console.log("'text' && false:", 'text' && false);
+// console.log("true && 'text':",true && 'text');
+// console.log("undefined && null && 0 && '' && null:", undefined && null && 0 && '' && null);
+// console.log("!true:", !true);
+// console.log("!false:", !false);
+// console.log("!'text':", !'text');
+// console.log("!!'text':", !!'text');
+
+let sum = '';
+const n = 5;
+for (let i = 1; i <= n; i++)
+    {
+    result += i;
+    console.log(result) 
+    }
