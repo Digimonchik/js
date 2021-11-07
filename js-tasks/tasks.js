@@ -100,10 +100,59 @@
 // console.log("!'text':", !'text');
 // console.log("!!'text':", !!'text');
 
-let sum = '';
-const n = 5;
-for (let i = 1; i <= n; i++)
-    {
+// let sum = '';
+// const n = 5;
+// for (let i = 1; i <= n; i++)
+//     {
+//     result += i;
+//     console.log(result) 
+//     }
+
+// const start = 0;
+// const end = 10;
+// let result = 1;
+// for (let i = start; i <= end; i++) {
+//     if (i % 5 == 0) {
+//         console.log(i)
+//     }
+//     else if (i % 2 == 0 & i % 4 > 0) {
+//         result += i;
+//     }
+//     else if (i % 3 == 0) {
+//             result -= i; 
+//     }
+//     else if (i % 4 == 0) {
+//         result *= i;
+//     }
+// }
+
+// let result = 0;
+// for (let i = 0; i <= 1000; i++) {
+//     if (i % 2 > 0) {
+//         console.log('Found');
+//         result += i;
+//     }
+// }
+// if (result * 5 > 5000) {
+//     console.log('Bigger')
+// }
+// else if (result * 5 == 5000) {
+//     console.log('equal')
+// }
+// else if (result * 5 < 5000) {
+//     console.log('Smaller')
+// }
+
+// let result = 0;
+// for (let i = 0; i <= 10000000; i++) {
+//     result += i;
+// }
+// console.log(result);
+
+let result = 0;
+for (let i = 0; i <= 1000; i++) {
     result += i;
-    console.log(result) 
-    }
+}
+let div = Math.trunc(result / 1234);
+let mods = result % 1234;
+console.log (div > mods)
