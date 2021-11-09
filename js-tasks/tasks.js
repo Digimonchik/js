@@ -314,24 +314,77 @@
 //     return balances[clients.indexOf(client)]
 // }
 
-function includes(arr, num) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === num) {
-           return true
-      }
-  }
-  return false
-};
+// function includes(arr, num) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === num) {
+//            return true
+//       }
+//   }
+//   return false
+// };
 
-function removeDuplucates(array) {
-    let newArr = [];
-    if (Array.isArray(array) == false) {
-        return null;
+// function uniqueCount(array) {
+//     let newArr = [];
+//     if (Array.isArray(array) == false) {
+//         return null;
+//     }
+//     for (let i=0; i< array.length; i++) {
+//         if (includes(newArr, array[i]) == false) {
+//             newArr.push(array[i])
+//         }
+//     }
+//     return newArr.length
+//     }
+
+
+// const gestSpecialNumbers = array => {
+//     let newArray = [];
+//     array.forEach(num => {
+//         if (num % 3 === 0) {
+//             newArray.push(num)
+//         };
+//     })
+//     return newArray
+// }
+
+// const sortDesc = array => {
+//     let result =[]
+//     result = array.sort((a, b) => a < b ? 1 : -1 )
+//     return result;
+//     }
+
+// const flatArray = array => [...array].flat().sort((a,b) => a > b ? 1 : -1 );
+// const allStud = ['a', 'b', 'c', 'd'];
+// const retakeStud = ['b', 'd'];
+// const getMessegesForBestStudents = (allStud, retakeStud) => {
+//     const passed = allStud.filter(name => retakeStud.indexOf(name) === -1);
+//     const messages = passed.map(name => 'Good job ' + name);
+//     return messages;
+// }
+// const squareArray = array => {
+//     if (Array.isArray(array) === false) { return null };
+//     return array.map(elem => elem * elem);
+// }
+
+// const reverseArray = array => {
+//     if (Array.isArray(array) === false) {
+//         return null;
+//     }
+//     let result = [];
+//     result = array.slice().reverse()
+//     return result;
+// }
+
+const increaseEvenEl= (arr, delta) => {
+    if(Array.isArray(arr) === false) {
+        return null
     }
-    for (let i=0; i< array.length; i++) {
-        if (includes(newArr, array[i]) == false) {
-            newArr.push(array[i])
-        }
+    let result = [];
+    result = arr.map(elem => {
+        if (elem % 2 == 0) return elem * delta;
+        return elem;
     }
-    return newArr.length
-    }
+    )
+
+    return result
+}
