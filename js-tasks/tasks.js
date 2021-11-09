@@ -26,6 +26,8 @@
 // console.log("undefined + '5':", undefined + '5');
 // console.log("'text' + null:", 'text' + null);
 
+// const { start } = require("repl");
+
 // console.log('17 to string is ' + String(17));
 // console.log('-17.17 to string is ' + String(-17.17));
 // console.log('false to string is ' + String(false));
@@ -146,13 +148,190 @@
 // let result = 0;
 // for (let i = 0; i <= 10000000; i++) {
 //     result += i;
-// }
-// console.log(result);
+// // }
+// // console.log(result);
 
-let result = 0;
-for (let i = 0; i <= 1000; i++) {
-    result += i;
-}
-let div = Math.trunc(result / 1234);
-let mods = result % 1234;
-console.log (div > mods)
+// let result = 0;
+// for (let i = 0; i <= 1000; i++) {
+//     result += i;
+// }
+// let div = Math.trunc(result / 1234);
+// let mods = result % 1234;
+// console.log (div > mods)
+
+
+// function getPrimes(num) {
+//     for (let i = 1; i < num; i++) {
+//         if (num % i == 0) {
+//             return false;
+//         }
+//          else {return true}
+//     }
+// }
+// function sum(from, to) {
+//     let result = 0;
+//     for (let i = from; i <= to; i++) {
+//       result +=i;
+//     }
+//     return result;
+//   }
+// function compareSums (a, b, c, d) {
+//   return sum(a,b) > sum(c,d)
+// }
+// function findDivCount(a, b, n) {
+//   let result = 0;
+//   for (let i=a; i <=b; i++) {
+//     if ( i % n == 0) {
+//         result += 1
+//         console.log()
+//     }
+//     }
+//     return result
+// }
+
+// function getArrayBounds(arr) {
+//     if (Array.isArray(arr) == false) {
+//         return null
+//     }
+//     else {
+//         return [arr.length, arr[0], arr[arr.length - 1]]
+//     }
+// }   
+
+// getArrayBounds([1, 10, 9, 11]); // ==> [4, 1, 11]
+// getArrayBounds(10, 12, 14); // ==> null
+// getArrayBounds([1]); // ==> [1, 1, 1]
+
+// function getSum(arr) {
+//     let result = 0;
+//     if (Array.isArray(arr) == false) {
+//         return null
+//     }
+//     else {
+//         for (let i = 0; i < arr.length; i++) {
+//             result += arr[i]
+//         }
+//         return result
+//     }
+// }
+ 
+// function getSpecialNumbers(from, to) {
+//   let arr = [];
+//   for (let i = from; i <= to; i ++) {
+//     if (i % 3 == 0) {
+//       arr.push(i); 
+//     }
+//     }
+//     return arr;
+//   }
+
+// function swap(arr) {
+//     const [start, ...rest] = arr;
+//     return [...rest, start]
+// }
+// function swapManual(arr) {
+//     let newArr = []
+//     for (let i = 1; i < arr.length; i++)
+//     {
+//         newArr.push(arr[i])
+//     }
+//     newArr.push(arr[0]);
+//     return newArr;
+// }
+
+// function checkSum(arr) {
+//   let sum = 0;
+//   if (Array.isArray(arr) == false) {
+//     return null
+//   }
+//   for (let i= 0; i< arr.length; i ++)
+//     {sum += arr[i]}
+//   if (sum > 100 ) {
+//     return true
+//   }
+// else {return false}
+// }
+
+// function reverseArray(arr) {
+//   let newArr = []
+//   if (Array.isArray(arr) == false) {
+//     return null
+//   }
+//   else {
+//       for (let i = 0; i < arr.length; i++) {
+//           console.log(arr[i]);
+//       newArr.unshift(arr[i])
+//     }
+//   }
+//   return newArr
+// }
+
+
+// function checker(arr) {
+//   let max= 0;
+//   let min= 0;
+//   if (Array.isArray(arr) == false) {
+//     return null
+//   }
+//   else {
+//     max = Math.max(...arr);
+//     min = Math.min(...arr);
+//     if (max + min > 1000) {
+//       return true;
+//       }
+//       else {return false}
+//     }
+//   }
+
+// function sortAsc(array) {
+//     let newArray = [];
+//     if (Array.isArray(array) == false) {
+//         return null
+//     }
+//     else 
+//         newArray = array.sort((a, b) => a - b)
+//   return newArray
+// }
+// function sortDesc(array) {
+//     let myArray = [];
+//     let reverseArray = [];
+//     if (Array.isArray(array) == false) {
+//         return null
+//     }
+//     else 
+//         myArray = array.sort((a, b) => a - b)
+//         for (let i = 0; i < myArray.length; i++) {
+//             reverseArray.unshift(myArray[i]);
+//         }
+//         return reverseArray
+// }
+// function withdraw(clients, balances, client, amount) {
+//     if (balances[clients.indexOf(client)] < amount) {
+//         return -1
+//     }
+
+//     balances[clients.indexOf(client)] = balances[clients.indexOf(client)] - amount;
+//     return balances[clients.indexOf(client)]
+// }
+
+function includes(arr, num) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === num) {
+           return true
+      }
+  }
+  return false
+};
+
+function removeDuplucates(array) {
+    let newArr = [];
+    if (Array.isArray(array) == false) {
+        return null;
+    }
+    for (let i=0; i< array.length; i++) {
+        if (includes(newArr, array[i]) == false) {
+            newArr.push(array[i])
+        }
+    }
+    return newArr.length
+    }
