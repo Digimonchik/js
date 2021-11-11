@@ -375,16 +375,110 @@
 //     return result;
 // }
 
-const increaseEvenEl= (arr, delta) => {
-    if(Array.isArray(arr) === false) {
-        return null
-    }
-    let result = [];
-    result = arr.map(elem => {
-        if (elem % 2 == 0) return elem * delta;
-        return elem;
-    }
-    )
+// const increaseEvenEl= (arr, delta) => {
+//     if(Array.isArray(arr) === false) {
+//         return null
+//     }
+//     let result = [];
+//     result = arr.map(elem => {
+//         if (elem % 2 == 0) return elem * delta;
+//         return elem;
+//     }
+//     )
+//     return result
+// }
 
-    return result
-}
+// const cloneArr = arr => { 
+//     if (Array.isArray(arr) == false)
+//     {return null}
+//     return [...arr]
+// }
+
+//  function withdraw(clients, balances, client, amount) {
+//     if (balances[clients.indexOf(client)] < amount) {
+//         return -1
+//     }
+
+//     balances[clients.indexOf(client)] = balances[clients.indexOf(client)] - amount;
+//     return balances[clients.indexOf(client)]
+// }
+
+// 
+
+// const filterNames = (arr, text) => {
+//     let result = [];
+//     result = arr.filter((name) => {
+//         if (name.includes(text) && name.length > 5) {
+//             return name
+//         }
+//     })
+//     return result
+//     }
+
+// const getAvarage = arr => {
+//     let sum = 0;
+//     sum = arr.reduce((firstItem, nextItem) => 
+//         firstItem + nextItem)
+//         return sum/arr.length
+// }
+
+// const transformToObject = arr => {
+//   let obj = {};
+//   arr.forEach(el => {
+//     obj[el] = el;
+//   })
+//   return obj
+// };
+
+
+// const concatProps = obj => {
+//     let arr = [];
+//   for (let key in obj) {
+//     arr.push(obj[key])
+//     }
+//     return arr
+// };
+
+const transaction = {
+  currency: 'USD',
+  value: 170,
+  operation: 'sale',
+  agent: {
+    country: 'Ukraine',
+    company: 'NYSE',
+  },
+  'operation time': 1584029990001,
+};
+// console.log(transaction.currency);
+// /* выведи в консоль значение свойства 'currency' с помощью точки */
+// console.log(transaction.value);
+// /* выведи в консоль значение свойства 'value' с помощью квадратных скобок */
+
+// const key = 'operation';
+// /* выведи в консоль значение свойства, название которого находится в переменной key - используйте квадратные скобки */
+// console.log(transaction[key]);  
+// /* выведи в консоль значение свойства 'company' используя квадратные скобки */
+// console.log(transaction.agent.company);
+// /* выведи в консоль значение свойства 'country' используя точку */
+//  console.log(transaction.agent.country)
+// /* выведи в консоль значение свойства 'operation time' используя квадратные скобки */
+// console.log(transaction['operation time'])
+
+// const pickProps = (obj, props) => {
+//     let result = {};
+//     for (let key in obj) {
+//         if (props.includes(key)) {
+//             result[key] = obj[key];
+//         }
+//     }
+//     return result;
+// }
+
+const getAdults = obj => {
+  result = {};
+  for (let key in obj) {
+    if (obj[key] >= 18)
+    result[key] = obj[key]
+  }
+  return result
+};
