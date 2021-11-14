@@ -214,7 +214,7 @@
 //         return result
 //     }
 // }
- 
+
 // function getSpecialNumbers(from, to) {
 //   let arr = [];
 //   for (let i = from; i <= to; i ++) {
@@ -483,14 +483,7 @@
 //   return result
 // };
 
-// const getAdults = obj => {
-//   const filteredArray = Object.entries(obj);
-//   console.log(filteredArray);
-//   const filteredUsers = filteredArray.filter(name => {
-//     name[] >= 18
-//   console.log(name[1])});
-// return filteredUsers
-// }
+
 
 // function getKeys(obj) {
 //   const keys  = Object.keys(obj);
@@ -593,16 +586,34 @@
 //   ]
 // }
 
-const getTotalRevenue = transactions => {
-  let result = 0;
-  transactions.forEach(key => {
-    console.log(key);
-    result += key.amount
-    // for (let elem of key) {
-    //   console.log(elem);
-    //   if (elem === 'amount')
-    //     console.log(key[elem])
-    // }
-  })
-  return result
-}
+// const getTotalRevenue = transactions => {
+//   let result = 0;
+//   transactions.forEach(key => {
+//     result += key.amount
+//   })
+//   return result
+// }
+
+// const getAdults = obj => {
+//   const filteredArray = Object.entries(obj);
+//   console.log(filteredArray);
+//   const filteredUsers = filteredArray.filter(name => {
+//     name[] >= 18
+//   console.log(name[1])});
+// return filteredUsers
+// }
+
+// const getAdults = obj => {
+//   let arr = [];
+//   if (Object.keys(obj).length == 0) {
+//     return arr
+//   };
+//   const usersArray = Object.entries(obj);
+//   const filteredArray = usersArray.filter(user => user[1] >= 18);
+//   const userNames = filteredArray.map(user => user[0]);
+//   return userNames
+// }
+
+const getFinitNumbers = arr => arr.filter(num => Number.isFinite(num) == true);
+const getFinitNumbers2 = arr => arr.filter(num => isFinite(num));
+const getNaN = arr => arr.map(num => Number.isNaN(num))
