@@ -439,16 +439,16 @@
 //     return arr
 // };
 
-const transaction = {
-  currency: 'USD',
-  value: 170,
-  operation: 'sale',
-  agent: {
-    country: 'Ukraine',
-    company: 'NYSE',
-  },
-  'operation time': 1584029990001,
-};
+// const transaction = {
+//   currency: 'USD',
+//   value: 170,
+//   operation: 'sale',
+//   agent: {
+//     country: 'Ukraine',
+//     company: 'NYSE',
+//   },
+//   'operation time': 1584029990001,
+// };
 // console.log(transaction.currency);
 // /* выведи в консоль значение свойства 'currency' с помощью точки */
 // console.log(transaction.value);
@@ -474,11 +474,135 @@ const transaction = {
 //     return result;
 // }
 
-const getAdults = obj => {
-  result = {};
-  for (let key in obj) {
-    if (obj[key] >= 18)
-    result[key] = obj[key]
-  }
+// const getAdults = obj => {
+//   result = {};
+//   for (let key in obj) {
+//     if (obj[key] >= 18)
+//     result[key] = obj[key]
+//   }
+//   return result
+// };
+
+// const getAdults = obj => {
+//   const filteredArray = Object.entries(obj);
+//   console.log(filteredArray);
+//   const filteredUsers = filteredArray.filter(name => {
+//     name[] >= 18
+//   console.log(name[1])});
+// return filteredUsers
+// }
+
+// function getKeys(obj) {
+//   const keys  = Object.keys(obj);
+//   return keys;
+// }
+
+// const compareObj = (obj1, obj2) => {
+//   const objvalues1 = Object.values(obj1);
+//   const objvalues2 = Object.values(obj2);
+//   for (let i = 0; i < objvalues1.length; i++) {
+//     if (objvalues1[i] != objvalues2[i]) return false;
+//   }
+//   return true;
+// }
+// const obj1 = {
+//   name: 'Tom',
+//   age: 17,
+// };
+
+// const obj2 = {
+//   name: 'Bob',
+//   age: 17,
+// };
+
+// const obj3 = {
+//   name: 'Bob',
+//   age: 17,
+//   student: false,
+// };
+
+// const obj4 = {
+//   name: 'Tom',
+//   age: 17,
+// };
+
+
+// function mergeObjectsV1(obj1, obj2) {
+//   return Object.assign(obj1, obj2)
+// }
+
+// function mergeObjectsV2(obj1, obj2) {
+//   return Object.assign(obj2, obj1)
+// }
+
+// function mergeObjectsV3(obj1, obj2) {
+//   let newObj = {};
+//   newObj = { ...obj1, ...obj2 };
+//   return newObj;
+// }
+
+// function mergeObjectsV4(obj1, obj2) {
+//     let newObj = {};
+//   newObj = { ...obj2, ...obj1 };
+//   return newObj;
+// }
+
+// // examples
+// const obj1 = {
+//   name: 'Tom',
+//   age: 17,
+// };
+
+// const obj2 = {
+//   name: 'Bob',
+//   student: false,
+// };
+
+// const getPeople = object => {
+// if (Object.keys(object).length == 0) {
+//     return [];
+// }
+//   let sortedObject = Object.values(object);
+//   sortedArray = [];
+//   result1 = [];
+//   result2 = [];
+//   sortedObject.map(key => {
+//     key.forEach(i => { sortedArray.push(i) })
+//   })
+//   sortedArray.map(key => {
+//     result1.push(Object.values(key))
+//   })
+//   result1.map(key => {
+//     key.forEach(i => { result2.push(key[0])})
+//   })
+//   return result2
+// }
+
+// const rooms = {
+//   room1: [
+//     { name: 'jack' },
+//     { name: 'Andrey'}
+//   ],
+//   room2: [
+//     {name: 'Dan'}
+//   ],
+//   room3: [
+//     {name: 'Denis'},
+//     {name: 'Max'},
+//     {name: 'Alex'},
+//   ]
+// }
+
+const getTotalRevenue = transactions => {
+  let result = 0;
+  transactions.forEach(key => {
+    console.log(key);
+    result += key.amount
+    // for (let elem of key) {
+    //   console.log(elem);
+    //   if (elem === 'amount')
+    //     console.log(key[elem])
+    // }
+  })
   return result
-};
+}
