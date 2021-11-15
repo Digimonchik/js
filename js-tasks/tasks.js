@@ -667,3 +667,16 @@ const multiRound = (num, prec) => {
     }
     return [Math.floor(num * parseInt(str)) / parseInt(str), Math.trunc(num * parseInt(str)) / parseInt(str), Math.ceil(num * parseInt(str)) / parseInt(str), Math.round(num * parseInt(str)) / parseInt(str), parseFloat(num.toFixed(prec))]
 }
+
+// const splitText = (str, length) => {
+//     const resultArr = [];
+//     let startingPoint = 0;
+//     while (true) {
+//         const chunk = str.substr(startingPoint, length)
+//         if (chunk.length == 0) {
+//             break
+//         }
+//         resultArr.push(chunk)
+//     }
+//     return resultArr
+// }
