@@ -614,6 +614,56 @@
 //   return userNames
 // }
 
-const getFinitNumbers = arr => arr.filter(num => Number.isFinite(num) == true);
-const getFinitNumbers2 = arr => arr.filter(num => isFinite(num));
-const getNaN = arr => arr.map(num => Number.isNaN(num))
+// const getFinitNumbers = arr => arr.filter(num => Number.isFinite(num) == true);
+// const getFinitNumbers2 = arr => arr.filter(num => isFinite(num));
+// const getNaN = arr => arr.map(num => Number.isNaN(num))
+
+// const getParsedIntegers = arr => arr.map(num => Number.parseInt(num));
+// const getParsedIntegersV2 = arr => arr.map(num => parseInt(num));
+// const getParsedFloats = arr => arr.map(num => Number.parseFloat(num));
+// const getParsedFloatsV2 = arr => arr.map(num => Number.parFloat(num));
+
+// const multiRound = num => [Math.floor(num*100)/100, Math.trunc(num*100)/100, Math.ceil(num*100)/100, Math.round(num*100)/100, parseFloat(num.toFixed(2))]
+// ;
+
+// const getMaxAbsoluteNumber = arr => {
+//     if (Array.isArray(arr) == false || arr.length == 0)
+//     return null;
+//     const newArr = arr.map(num => Math.abs(num))
+//     console.log(newArr)
+//     return Math.max(...newArr)
+// }
+
+// const getTotalPrice = arr => {
+//     let result = 0;
+//     arr.forEach(num => result += num);
+    
+//     result = Math.floor(result*100)/100
+//     return '$'+result
+// }
+
+// function getRandomInt(length, from, to) {
+//     let result = [],
+//         min = Math.ceil(from),
+//         max = Math.floor(to);
+//     if (max - min < 0 && max != min) {
+//         return null
+//     }
+//     for (let i = 1; i <= length; i++) {
+//         console.log(min, max)
+//        result.push(Math.floor(Math.random() * (max - min + 1) + min)
+//         )
+//     };
+//     return result
+
+// }
+
+// const multiRound = (num,prec) => [Math.floor(num*parseInt('1'+prec*'0')/100, Math.trunc(num*100)/100, Math.ceil(num*100)/100, Math.round(num*100)/100, parseFloat(num.toFixed(2))]
+
+const multiRound = (num, prec) => {
+    let str = '1';
+    for (let i = 1; i <= prec; i++) {
+        str = str + '0'
+    }
+    return [Math.floor(num * parseInt(str)) / parseInt(str), Math.trunc(num * parseInt(str)) / parseInt(str), Math.ceil(num * parseInt(str)) / parseInt(str), Math.round(num * parseInt(str)) / parseInt(str), parseFloat(num.toFixed(prec))]
+}
