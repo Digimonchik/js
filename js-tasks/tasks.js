@@ -637,7 +637,7 @@
 // const getTotalPrice = arr => {
 //     let result = 0;
 //     arr.forEach(num => result += num);
-    
+
 //     result = Math.floor(result*100)/100
 //     return '$'+result
 // }
@@ -660,23 +660,141 @@
 
 // const multiRound = (num,prec) => [Math.floor(num*parseInt('1'+prec*'0')/100, Math.trunc(num*100)/100, Math.ceil(num*100)/100, Math.round(num*100)/100, parseFloat(num.toFixed(2))]
 
-const multiRound = (num, prec) => {
-    let str = '1';
-    for (let i = 1; i <= prec; i++) {
-        str = str + '0'
-    }
-    return [Math.floor(num * parseInt(str)) / parseInt(str), Math.trunc(num * parseInt(str)) / parseInt(str), Math.ceil(num * parseInt(str)) / parseInt(str), Math.round(num * parseInt(str)) / parseInt(str), parseFloat(num.toFixed(prec))]
-}
+// const multiRound = (num, prec) => {
+//     let str = '1';
+//     for (let i = 1; i <= prec; i++) {
+//         str = str + '0'
+//     }
+//     return [Math.floor(num * parseInt(str)) / parseInt(str), Math.trunc(num * parseInt(str)) / parseInt(str), Math.ceil(num * parseInt(str)) / parseInt(str), Math.round(num * parseInt(str)) / parseInt(str), parseFloat(num.toFixed(prec))]
+// }
 
-// const splitText = (str, length) => {
+// const splitText = (str, length = 10) => {
 //     const resultArr = [];
 //     let startingPoint = 0;
+//     if (typeof (str) != 'string')
+//         {return null}
 //     while (true) {
 //         const chunk = str.substr(startingPoint, length)
-//         if (chunk.length == 0) {
+//         startingPoint += length;
+//         console.log(chunk)
+//         if (chunk.length == 0)
+//             break
+//         resultArr.push(chunk[0].toUpperCase() + chunk.slice(1))
+//     }
+//     return resultArr.join('\n')
+// }
+
+// const sortContacts = (arr, bull = true) => {
+//     if (Array.isArray(arr) == false) {
+//         return null
+//     }
+//     let result = []
+//     if (bull == true) {
+//         result = arr.sort((a, b) => a.name.localeCompare(b.name))
+//     };
+//     if (bull == false) {
+//         result = arr.sort((a, b) => b.name.localeCompare(a.name))
+//     }
+//         return result
+// }
+    
+//     const splitString = (str, length = 10) =>{
+//         let resultArr = [];
+//     let startingPoint = 0;
+//     if (typeof (str) != 'string')
+//         {return null}
+//         while (true) {
+//             let chunk = str.substr(startingPoint, length)
+//             startingPoint += length;
+        
+//             if (chunk.length == 0) {
+//                 break
+//             }
+            
+//             resultArr.push(chunk.padEnd(length, '.'))
+//         }
+//    return resultArr
+// }
+
+// const countOccurrences = (text = '', str) => {
+//     let newArr = []
+//     if (typeof (str) != 'string') {
+//         return null
+//     }
+//     if (text.indexOf(str) >= 0) {
+//         console.log(text.indexOf(str))
+//     }
+//     return newArr
+// }
+// const countOccurrences = (text = '', str) => {
+//     if (typeof (str) != 'string') { return null }
+//     let result = 0;
+//     let iter = text.indexOf(str);
+
+//     while (iter > -1) {
+//         result += 1;
+//         console.log(result);
+//         iter = text.indexOf(str, iter++);
+//         if (iter == -1) {
 //             break
 //         }
-//         resultArr.push(chunk)
 //     }
-//     return resultArr
+//     return result
 // }
+// const countOccurrences = (text = '', str) => {
+//     if (typeof (str) != 'string') { return null }
+//     console.log((text.match(str) || []).length)
+// }
+// const countOccurrences = (text = '', str) => {
+//     let counter = 0;
+//     for (let char of text) {
+//         console.log(char)
+//         if (char === str) {
+//             counter++;
+//         }
+//     }
+//     return counter
+// }
+// const countOccurrences = (text = '', str) => {
+//     const count = (text.match(`/${str}/i`) || []).length;
+//     console.log(count);
+// } 
+// const countOccurrences = (text = '', str) => {
+//     if (typeof (str) != 'string') { return null }
+//     let count = 0;
+//     count = (text.split(str).length - 1);
+//     return count
+// }
+
+// const reverseStr = str => {
+//     if (typeof (str) != 'string') {
+//         return null
+//     }
+//     return str.split("").reverse().join("")
+// }
+// let arr = ([' 1.9', '16.4', 17, '1 dollar']);
+// let filteredArr = [];
+// const cleanTransactionsList = arr => {
+//     filteredArr = arr.filter(el => {
+//         if (!isNaN(el)) {
+//             return el
+//         }
+//     })
+// return filteredArr.map(el => `$${Number.parseFloat(el).toFixed(2)}`)
+// }
+
+    // const calc = str => {
+    //     const [a, operator, b] = str.split(' ');
+    //     let result
+
+    //     switch (operator) {
+    //         case '+':
+    //             result = Number(a) + +b;
+    //             break;
+        
+    //         case '-':
+    //             result = a - b
+    //             break;
+    //     }
+    //     return `${str} = ${result}`
+    // }
