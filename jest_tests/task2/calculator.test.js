@@ -1,8 +1,8 @@
 import getSum, { getSquareArray,getOddNumbers } from "./calculator";
 
 it('square the array', () => {
-    const result = getSquareArray([1,3,4,5])
-    expect(result).toEqual([1,9,16,25])
+    const result = getSquareArray([1,2,3])
+    expect(result).toEqual([1,4,9])
 })
 
 it('gets ods', () => {
