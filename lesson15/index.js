@@ -289,7 +289,7 @@
 
 // printTransaction()
 
-let user = {
+const user = {
     firstName: 'John',
     lastName: 'Doe',
     getFullName() {
