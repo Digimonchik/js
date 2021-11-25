@@ -1,4 +1,4 @@
-export function getTittleElement() {
+export function getTitleElement() {
     const element = document.querySelector('.title');
     console.dir(element);
     return element
