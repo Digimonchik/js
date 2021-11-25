@@ -12,6 +12,10 @@
 // }
 // // console.log(event.getInvitations())
 
+// const { functionTypeAnnotation } = require("@babel/types");
+
+// const { METHOD_TYPES } = require("@babel/types");
+
 // function sumOfSquares() {
 //     return [...arguments].reduce((acc, elem) => {
 //         return acc + Math.pow(elem, 2);
@@ -32,7 +36,6 @@
 //     }
 // }
 //  const deferredHi = defer(user.sayHi, 1000)
-let myArgs =[]
 // function defer(func) {
 //     [].forEach.apply(arguments, (elem) => {
 //         myArgs.push(elem)
@@ -40,15 +43,33 @@ let myArgs =[]
 // }
 // function myFunc(a, b) {
 //     return a+b
-let myfunc = (a,b) => {
-  return a/b
+
+// function saveCalls(func) {
+//   let save.calls
+//   return function withMemory(...args) {
+//     let myArgs = []
+//       myArgs.push(args);
+  
+  
+//     }
+
+function myfunc(a,b) {
+  console.log(a/b)
 }
-let calls = [];
-  function spy(func) {
-    return function wrapper(...args) {
-      calls.push(args);
-    }
+function saveCalls(func) {
+  const calls = [];
+  return function withMemory(...args) {
+    withMemory.calls = calls;
+    func.apply(this,[...args]);
+    calls.push([...args]);
   }
-let b = spy(myfunc)
-b(2, 2)
-b(2, 4)
+}
+const mySpy = saveCalls(myfunc)
+
+const user = {
+  name: 'John',
+  sayHi() {
+    console.log(this.name)
+  }
+}
+const methodWithMemory = saveCalls(user.sayHi)
