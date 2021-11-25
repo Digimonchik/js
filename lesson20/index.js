@@ -131,13 +131,52 @@
 // class UserRepository extends User {
 //     constructor(User) {
 //         th.users = Object.freeze(User);
-//     }
 
 class User {
   constructor(id, name, sessionId) {
-    this.id = id,
-    this.name = name,
-    this.sessionId = sessionId
-    this.Users = [].push(this)
+    this.id = (id).toString(),
+      this.name = name,
+      this.sessionId = (sessionId).toString(),
+       Object.freeze(this)
   }
 }
+class UserRepository {
+  constructor(users) {
+    Object.freeze(users)
+    this.users = users
+    Object.freeze(this)
+  }
+
+  getUserNames() {
+    let usersArray = []
+    this.users.map((obj) => {
+      usersArray.push(obj.name);
+      
+    })
+    return usersArray
+  }
+  getUserIds() {
+    let idArray = []
+    this.users.map((obj) => {
+      idArray.push(obj.id);
+      
+    })
+    return idArray
+  }
+  
+  getUserNameById(id) {
+    let user;
+    this.users.map((obj) => {
+      if (obj.id == id) {
+      user = obj.name
+      }
+    })
+    return user
+  }
+}
+let myObj = {
+  id: 2,
+  name: 'Dima',
+  sessionId: 4
+}
+let myUsers = [myObj]
