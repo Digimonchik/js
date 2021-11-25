@@ -4,7 +4,8 @@ const tasks = [
   { text: 'Visit party', done: false },
   { text: 'Visit doctor', done: true },
   { text: 'Buy meat', done: true },
-]
+];
+
 const renderTasks = taskList => {
     const listElem = document.querySelector('.list');
     
@@ -24,5 +25,3 @@ const renderTasks = taskList => {
     })
     listElem.append(...listItemsElems)
 }
-
-renderTasks(tasks)
