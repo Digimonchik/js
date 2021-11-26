@@ -11,5 +11,6 @@ export function getItemsArray() {
     //     elementsArr.push(element)
     // })
     elementsArr = Array.from(elementList)
+    console.dir(elementsArr)
     return elementsArr
 }
