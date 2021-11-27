@@ -1,4 +1,4 @@
-export function setTitle(text) {
+function setTitle(text) {
     const elem = document.querySelector('.title')
-    elem.textContent(text)
+    elem.textContent = text
 }
