@@ -1,6 +1,6 @@
 export function createButton(text) {
     let perent = document.querySelector('body');
     let elem = document.createElement('button');
-    elem.innerText = text;
+    elem.textContent = text;
     perent.append(elem)
 }
