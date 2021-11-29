@@ -20,6 +20,14 @@ const logTarget = (text, color) => {
 clearBtn.addEventListener('click', () => {
     eventsListElem.innerHTML = '';
 })
+divElem.addEventListener('click', logGrayDiv, true);
+    divElem.addEventListener('click', logGreenDiv);
+
+    pElem.addEventListener('click', logGrayP, true);
+    pElem.addEventListener('click', logGreenP);
+
+    spanElem.addEventListener('click', logGraySpan, true);
+    spanElem.addEventListener('click', logGreenSpan);
 atachHandlers.addEventListener('click', () => {
     divElem.addEventListener('click', logGrayDiv, true);
     divElem.addEventListener('click', logGreenDiv);
