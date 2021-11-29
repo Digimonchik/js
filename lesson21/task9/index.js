@@ -1,4 +1,4 @@
-function finishForm() {
+export function finishForm() {
     let newInput = document.createElement('input');
     let myForm = document.querySelector('.login-form');
     myForm.prepend(newInput);
