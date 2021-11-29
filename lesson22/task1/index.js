@@ -9,16 +9,27 @@ eventsListElem.innerHTML = null;
 const logTarget = (text, color) => {
     eventsListElem.innerHTML += `<span style="color: ${color}; margin-left: 8px;">${text}</span>`;
 }
-const logGreenDiv = logTarget.bind(null, 'DIV', 'green');
-const logGreenP = logTarget.bind(null, 'P', 'green');
-const logGreenSpan = logTarget.bind(null, 'SPAN', 'green');
-const logGrayDiv = logTarget.bind(null, 'DIV', 'gray');
-const logGrayP = logTarget.bind(null, 'P', 'gray');
-const logGraySpan = logTarget.bind(null, 'SPAN', 'gray');
+const logGreenDiv = logTarget.bind(null, 'div', 'green');
+const logGreenP = logTarget.bind(null, 'p', 'green');
+const logGreenSpan = logTarget.bind(null, 'span', 'green');
+
+const logGrayDiv = logTarget.bind(null, 'div', 'gray');
+const logGrayP = logTarget.bind(null, 'p', 'gray');
+const logGraySpan = logTarget.bind(null, 'span', 'gray');
 
 clearBtn.addEventListener('click', () => {
     eventsListElem.innerHTML = null;
 })
+
+divElem.addEventListener('click', logGrayDiv, true);
+divElem.addEventListener('click', logGreenDiv);
+
+pElem.addEventListener('click', logGrayP, true);
+pElem.addEventListener('click', logGreenP);
+
+spanElem.addEventListener('click', logGraySpan, true);
+spanElem.addEventListener('click', logGreenSpan);
+    
 atachHandlers.addEventListener('click', () => {
     divElem.addEventListener('click', logGrayDiv, true);
     divElem.addEventListener('click', logGreenDiv);
