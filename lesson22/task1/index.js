@@ -3,8 +3,8 @@ const divElem = document.querySelector('.rect_div');
 const pElem = document.querySelector('.rect_p');
 const eventsListElem = document.querySelector('.events-list');
 const clearBtn = document.querySelector('.clear-btn');
-const atachHandlers = document.querySelector('.attach-handlers-btn')
-const removeHandlers = document.querySelector('.remove-handlers-btn')
+const atachHandlers = document.querySelector('.attach-handlers-btn');
+const removeHandlers = document.querySelector('.remove-handlers-btn');
 eventsListElem.innerHTML = null;
 
 const logTarget = (text, color) => {
@@ -32,19 +32,8 @@ pElem.addEventListener('click', logGreenP);
 spanElem.addEventListener('click', logGraySpan, true);
 spanElem.addEventListener('click', logGreenSpan);
     
-// atachHandlers.addEventListener('click', () => {
-
-//     divElem.addEventListener('click', logGrayDiv, true);
-//     divElem.addEventListener('click', logGreenDiv);
-
-//     pElem.addEventListener('click', logGrayP, true);
-//     pElem.addEventListener('click', logGreenP);
-
-//     spanElem.addEventListener('click', logGraySpan, true);
-//     spanElem.addEventListener('click', logGreenSpan);
-// })
-
 removeHandlers.addEventListener('click', () => {
+    
     divElem.removeEventListener('click', logGrayDiv, true);
     divElem.removeEventListener('click', logGreenDiv);
 
@@ -52,6 +41,18 @@ removeHandlers.addEventListener('click', () => {
     pElem.removeEventListener('click', logGreenP);
 
     spanElem.removeEventListener('click', logGraySpan, true);
-    spanElem.removeEventListener('click', logGreenSpan)
+    spanElem.removeEventListener('click', logGreenSpan);
+});
+
+atachHandlers.addEventListener('click', () => {
+
+    divElem.addEventListener('click', logGrayDiv, true);
+    divElem.addEventListener('click', logGreenDiv);
+
+    pElem.addEventListener('click', logGrayP, true);
+    pElem.addEventListener('click', logGreenP);
+
+    spanElem.addEventListener('click', logGraySpan, true);
+    spanElem.addEventListener('click', logGreenSpan);
 });
 
