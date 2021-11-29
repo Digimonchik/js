@@ -12,12 +12,12 @@ const renderTasks = taskList => {
     const listItemsElems = taskList.map(({ text, done }) => {
         const listItemElem = document.createElement('li');
         listItemElem.classList.add('list__item');
+        if (done) {
+            listItemElem.classList.add('list__item_done')
+        }
         const checkboxElem = document.createElement('input')
         checkboxElem.setAttribute('type', 'checkbox')
         checkboxElem.checked = done;
-        if (checkboxElem.checked === true) {
-            listItemElem.classList.add('list__item_done')
-        }
         checkboxElem.classList.add('list__item-checkbox');
         listItemElem.append(checkboxElem, text);
         
