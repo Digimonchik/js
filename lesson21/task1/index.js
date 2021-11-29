@@ -6,10 +6,10 @@ const tasks = [
   { text: 'Buy meat', done: true },
 ];
 
-const renderTasks = taskList => {
+const renderTasks = tasksList => {
     const listElem = document.querySelector('.list');
     
-    const listItemsElems = taskList.sort((a, b) => a.done - b.done)
+    const listItemsElems = tasksList.sort((a, b) => a.done - b.done)
     .map(({ text, done }) => {
         const listItemElem = document.createElement('li');
         listItemElem.classList.add('list__item');
