@@ -9,7 +9,8 @@ const tasks = [
 const renderTasks = taskList => {
     const listElem = document.querySelector('.list');
     
-    const listItemsElems = taskList.map(({ text, done }) => {
+    const listItemsElems = taskList.sort((a, b) => a.done - b.done)
+    .map(({ text, done }) => {
         const listItemElem = document.createElement('li');
         listItemElem.classList.add('list__item');
         if (done) {
@@ -27,3 +28,4 @@ const renderTasks = taskList => {
 
     listElem.append(...listItemsElems)
 }
+renderTasks(tasks)
