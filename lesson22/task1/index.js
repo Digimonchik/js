@@ -28,16 +28,7 @@ divElem.addEventListener('click', logGrayDiv, true);
 
     spanElem.addEventListener('click', logGraySpan, true);
     spanElem.addEventListener('click', logGreenSpan);
-atachHandlers.addEventListener('click', () => {
-    divElem.addEventListener('click', logGrayDiv, true);
-    divElem.addEventListener('click', logGreenDiv);
 
-    pElem.addEventListener('click', logGrayP, true);
-    pElem.addEventListener('click', logGreenP);
-
-    spanElem.addEventListener('click', logGraySpan, true);
-    spanElem.addEventListener('click', logGreenSpan);
-});
 removeHandlers.addEventListener('click', () => {
     divElem.removeEventListener('click', logGrayDiv, true);
     divElem.removeEventListener('click', logGreenDiv);
@@ -47,4 +38,14 @@ removeHandlers.addEventListener('click', () => {
 
     spanElem.removeEventListener('click', logGraySpan, true);
     spanElem.removeEventListener('click', logGreenSpan)
+})
+atachHandlers.addEventListener('click', () => {
+    divElem.addEventListener('click', logGrayDiv, true);
+    divElem.addEventListener('click', logGreenDiv);
+
+    pElem.addEventListener('click', logGrayP, true);
+    pElem.addEventListener('click', logGreenP);
+
+    spanElem.addEventListener('click', logGraySpan, true);
+    spanElem.addEventListener('click', logGreenSpan);
 })
