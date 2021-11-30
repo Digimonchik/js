@@ -1,5 +1,3 @@
-"use strict";
-
 const spanElem = document.querySelector('.rect_span');
 const divElem = document.querySelector('.rect_div');
 const pElem = document.querySelector('.rect_p');
@@ -32,9 +30,9 @@ removeHandlersBtn.addEventListener('click', () => {
     spanElem.removeEventListener('click', logGreenSpan);
 });
 
-clearBtn.addEventListener('click', () => {
-    eventsListElem.innerHTML = null;
-})
+// clearBtn.addEventListener('click', () => {
+//     eventsListElem.innerHTML = null;
+// })
 function attachHandlers() {
     console.log(event)
     divElem.addEventListener('click', logGrayDiv, true);
