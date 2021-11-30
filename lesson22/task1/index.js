@@ -44,7 +44,7 @@ removeHandlersBtn.addEventListener('click', () => {
     spanElem.removeEventListener('click', logGreenSpan);
 });
 
-attachHandlersBtn.addEventListener('click', () => {
+function attachHandlers() {
 
     divElem.addEventListener('click', logGrayDiv, true);
     divElem.addEventListener('click', logGreenDiv);
@@ -54,5 +54,9 @@ attachHandlersBtn.addEventListener('click', () => {
 
     spanElem.addEventListener('click', logGraySpan, true);
     spanElem.addEventListener('click', logGreenSpan);
-});
+};
+attachHandlersBtn.addEventListener('click', attachHandlers)
+document.addEventListener('DOMContentLoaded', () => {
+    attachHandlers()
+})
 
