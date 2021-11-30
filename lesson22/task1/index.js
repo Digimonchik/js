@@ -9,7 +9,7 @@ eventsListElem.innerHTML = null;
 
 const logTarget = (text, color) => {
     eventsListElem.innerHTML += `<span style="color: ${color}; margin-left: 8px;">${text}</span>`;
-}
+};
 
 const logGreenDiv = logTarget.bind(null, 'div', 'green');
 const logGreenP = logTarget.bind(null, 'p', 'green');
@@ -21,9 +21,9 @@ const logGraySpan = logTarget.bind(null, 'span', 'gray');
 
 clearBtn.addEventListener('click', () => {
     eventsListElem.innerHTML = null;
-})
+});
 const attachHandlers = () => {
-    console.log(event)
+    console.log(event);
     divElem.addEventListener('click', logGrayDiv, true);
     divElem.addEventListener('click', logGreenDiv);
 
@@ -33,9 +33,7 @@ const attachHandlers = () => {
     spanElem.addEventListener('click', logGraySpan, true);
     spanElem.addEventListener('click', logGreenSpan);
 };
-attachHandlersBtn.addEventListener('click', () => {
-    attachHandlers()
-});
+attachHandlersBtn.addEventListener('click', attachHandlers);
 document.addEventListener('DOMContentLoaded', () => {
     attachHandlers()
 });
