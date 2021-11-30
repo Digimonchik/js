@@ -1,3 +1,5 @@
+"use strict";
+
 const spanElem = document.querySelector('.rect_span');
 const divElem = document.querySelector('.rect_div');
 const pElem = document.querySelector('.rect_p');
