@@ -34,6 +34,7 @@ clearBtn.addEventListener('click', () => {
     eventsListElem.innerHTML = null;
 })
 function attachHandlers() {
+    console.log(event)
     divElem.addEventListener('click', logGrayDiv, true);
     divElem.addEventListener('click', logGreenDiv);
 
@@ -47,7 +48,7 @@ attachHandlersBtn.addEventListener('click', () => {
     attachHandlers();
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', () => {
     attachHandlers();
     eventsListElem.innerHTML = null;
 });
