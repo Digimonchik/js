@@ -23,7 +23,7 @@ clearBtn.addEventListener('click', () => {
     eventsListElem.innerHTML = null;
 })
 const attachHandlers = () => {
-
+    console.log(event)
     divElem.addEventListener('click', logGrayDiv, true);
     divElem.addEventListener('click', logGreenDiv);
 
@@ -33,7 +33,9 @@ const attachHandlers = () => {
     spanElem.addEventListener('click', logGraySpan, true);
     spanElem.addEventListener('click', logGreenSpan);
 };
-attachHandlersBtn.addEventListener('click', attachHandlers);
+attachHandlersBtn.addEventListener('click', () => {
+    attachHandlers()
+});
 document.addEventListener('DOMContentLoaded', () => {
     attachHandlers()
 });
