@@ -20,13 +20,13 @@ const logGraySpan = logTarget.bind(null, 'span', 'gray');
 
 removeHandlersBtn.addEventListener('click', () => {
 
-    divElem.removeEventListener('click', logGrayDiv, true);
+    divElem.removeEventListener('click', logGrayDiv, { capture: true });
     divElem.removeEventListener('click', logGreenDiv);
 
-    pElem.removeEventListener('click', logGrayP, true);
+    pElem.removeEventListener('click', logGrayP, { capture: true });
     pElem.removeEventListener('click', logGreenP);
 
-    spanElem.removeEventListener('click', logGraySpan, true);
+    spanElem.removeEventListener('click', logGraySpan, { capture: true });
     spanElem.removeEventListener('click', logGreenSpan);
 });
 
@@ -48,7 +48,7 @@ attachHandlersBtn.addEventListener('click', () => {
     attachHandlers();
 });
 
-window.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     attachHandlers();
     eventsListElem.innerHTML = null;
 });
