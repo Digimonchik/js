@@ -18,21 +18,21 @@ const logGrayDiv = logTarget.bind(null, 'div', 'gray');
 const logGrayP = logTarget.bind(null, 'p', 'gray');
 const logGraySpan = logTarget.bind(null, 'span', 'gray');
 
-// removeHandlersBtn.addEventListener('click', () => {
+removeHandlersBtn.addEventListener('click', () => {
 
-//     divElem.removeEventListener('click', logGrayDiv, { capture: true });
-//     divElem.removeEventListener('click', logGreenDiv);
+    divElem.removeEventListener('click', logGrayDiv, { capture: true });
+    divElem.removeEventListener('click', logGreenDiv);
 
-//     pElem.removeEventListener('click', logGrayP, { capture: true });
-//     pElem.removeEventListener('click', logGreenP);
+    pElem.removeEventListener('click', logGrayP, { capture: true });
+    pElem.removeEventListener('click', logGreenP);
 
-//     spanElem.removeEventListener('click', logGraySpan, { capture: true });
-//     spanElem.removeEventListener('click', logGreenSpan);
-// });
+    spanElem.removeEventListener('click', logGraySpan, { capture: true });
+    spanElem.removeEventListener('click', logGreenSpan);
+});
 
-// clearBtn.addEventListener('click', () => {
-//     eventsListElem.innerHTML = null;
-// })
+clearBtn.addEventListener('click', () => {
+    eventsListElem.innerHTML = null;
+})
 function attachHandlers() {
     console.log(event)
     divElem.addEventListener('click', logGrayDiv, true);
