@@ -55,8 +55,6 @@ function attachHandlers() {
     spanElem.addEventListener('click', logGraySpan, true);
     spanElem.addEventListener('click', logGreenSpan);
 };
-attachHandlersBtn.addEventListener('click', attachHandlers)
-document.addEventListener('DOMContentLoaded', () => {
-    attachHandlers()
-})
+attachHandlersBtn.addEventListener('click', attachHandlers);
+document.addEventListener('DOMContentLoaded', attachHandlers);
 
