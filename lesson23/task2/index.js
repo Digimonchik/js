@@ -4,7 +4,7 @@ const range = []
         range.push(i);
     }
     return range
-}
+}t 
 const getLineSeats = () => 
     generateNumbers(1, 10)
         .map(seatNumber =>
