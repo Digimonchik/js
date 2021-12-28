@@ -1,9 +1,6 @@
 import { initToDoHandlers } from "./initHandlers.js";
 import { renderTasks } from "./addTask.js";
 
-const listElem = document.querySelector(".list");
-const createButton = document.querySelector(".create-task-btn");
-
 document.addEventListener("DOMContentLoaded", () => {
   renderTasks();
   initToDoHandlers();
