@@ -1,15 +1,5 @@
 import { setItem, getItem } from "./common.js";
 
-// export const CreateTask = () => {
-//   const taskInput = document.querySelector(".task-input");
-//   const newObj = {};
-//   if (taskInput.value.length > 0) {
-//     newObj.text = taskInput.value;
-//     newObj.done = false;
-
-//     setTask(newObj);
-//   }
-// };
 const createCheckbox = ({ done, id }) => {
   const checkboxElem = document.createElement("input");
   checkboxElem.setAttribute("type", "checkbox");
@@ -20,7 +10,7 @@ const createCheckbox = ({ done, id }) => {
   return checkboxElem;
 };
 
-export const createListElem = ({ text, done, id }) => {
+const createListElem = ({ text, done, id }) => {
   const listItemElem = document.createElement("li");
   listItemElem.classList.add("list__item");
   const checkboxElem = createCheckbox({ done, id });
@@ -33,7 +23,7 @@ export const createListElem = ({ text, done, id }) => {
 };
 export const renderTasks = () => {
   const listElem = document.querySelector(".list");
-  const tasksList = getItem("taskList") || [];
+  const tasksList = getItem("tasksList") || [];
   listElem.innerHTML = "";
   const tasksElems = tasksList
     .sort((a, b) => a.done - b.done)
@@ -47,7 +37,7 @@ export const onCreateTask = () => {
     return;
   }
   taskInput.value = "";
-  const taskList = getItem("taskList") || [];
+  const taskList = getItem("tasksList") || [];
 
   const newTaskList = taskList.concat({
     text,
@@ -55,22 +45,7 @@ export const onCreateTask = () => {
     createDate: new Date().toISOString(),
     id: Math.random().toString(),
   });
-  setItem("taskList", newTaskList);
-  console.log(getItem("taskList"));
+  setItem("tasksList", newTaskList);
+  console.log(getItem("tasksList"));
   renderTasks();
 };
-
-// export const appendElem = () => {
-//   const listElem = document.querySelector(".list");
-//   const taskInput = document.querySelector(".task-input");
-//   if (taskInput.value.length > 0) {
-//     const listItemElem = document.createElement("li");
-//     listItemElem.classList.add("list__item");
-//     const checkbox = document.createElement("input");
-//
-//     checkbox.classList.add("list__item-checkbox");
-//     listItemElem.append(checkbox, taskInput.value);
-//     taskInput.value = null;
-//     listElem.append(listItemElem);
-//   }
-// };

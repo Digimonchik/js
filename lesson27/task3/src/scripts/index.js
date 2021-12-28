@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const onStorangeChange = (e) => {
   console.log(e.key);
-  if (e.key === "taskList") {
+  if (e.key === "tasksList") {
     renderTasks();
   }
 };
