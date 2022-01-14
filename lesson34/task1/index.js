@@ -12,8 +12,9 @@ function createUser(userData) {
     },
     body: JSON.stringify(userData),
   })
-    .then((response) => response.text())
-    .then((data) => alert(data));
+    .then((response) => response.json())
+    .then((data) => alert(data))
+    .then(() => loginForm.reset());
 }
 
 submitBtn.addEventListener("click", (e) => {
@@ -23,7 +24,7 @@ submitBtn.addEventListener("click", (e) => {
   formData.forEach((value, key) => {
     userObj[key] = value;
   });
-  createUser(userObj).then(() => loginForm.reset());
+  createUser(userObj);
 });
 loginForm.addEventListener("input", () => {
   if (loginForm.reportValidity()) {
