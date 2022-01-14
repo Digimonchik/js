@@ -11,28 +11,22 @@ function createUser(userData) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(userData),
-  });
+  })
+    .then((response) => console.log(response))
+    .then(() => loginForm.reset());
 }
 
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log("сабмит");
   const formData = new FormData(loginForm);
-  console.log(formData);
-  const userObj = {
-    email: formData.get("email"),
-    username: formData.get("name"),
-    password: formData.get("password"),
-  };
-  createUser(userObj)
-    .then((response) => alert(response))
-    .then(() => loginForm.reset());
+  const userObj = {};
+  formData.forEach((value, key) => {
+    userObj[key] = value;
+  });
+  createUser(userObj);
 });
 loginForm.addEventListener("input", () => {
   if (loginForm.reportValidity()) {
     submitBtn.disabled = false;
   } else submitBtn.disabled = true;
 });
-
-// loginForm.addEventListener("submit", () => {
-// });
