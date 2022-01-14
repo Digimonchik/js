@@ -24,10 +24,11 @@ submitBtn.addEventListener("click", (e) => {
     username: formData.get("name"),
     password: formData.get("password"),
   };
-  createUser(userObj);
-  console.log(userObj);
+  createUser(userObj)
+    .then((response) => alert(response))
+    .then(() => loginForm.reset());
 });
-loginForm.addEventListener("change", () => {
+loginForm.addEventListener("input", () => {
   if (loginForm.reportValidity()) {
     submitBtn.disabled = false;
   } else submitBtn.disabled = true;
