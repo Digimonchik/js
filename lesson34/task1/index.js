@@ -12,7 +12,11 @@ function createUser(userData) {
     },
     body: JSON.stringify(userData),
   })
-    .then((response) => alert(response))
+    .then((response) =>
+      //   alert(response);
+      response.text()
+    )
+    .then((data) => alert(data))
     .then(() => loginForm.reset());
 }
 
