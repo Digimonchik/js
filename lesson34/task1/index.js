@@ -12,11 +12,11 @@ function createUser(userData) {
     },
     body: JSON.stringify(userData),
   })
-    .then((response) => response.text())
+    .then((response) => response.json())
     .then((data) => {
-      alert(data);
-    })
-    .then(() => loginForm.reset());
+      alert(JSON.stringify(data));
+      loginForm.reset();
+    });
 }
 
 submitBtn.addEventListener("click", (e) => {
