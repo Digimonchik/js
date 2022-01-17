@@ -9,21 +9,13 @@ const userNameInputElem = document.querySelector(".name-form__input");
 
 userAvatarElem.src = "https://avatars3.githubusercontent.com/u10002";
 const fetchUserData = (userName) =>
-  fetch(`https://api.github.com/users/${userName}`)
-    .then((response) => {
-      if (response.status === 200) {
-        return response.json();
-      }
-      throw new Error("Failed to load data");
-    })
-    .then((data) => {
+  fetch(`https://api.github.com/users/${userName}`).then((response) => {
+    if (response.status === 200) {
       spinner.classList.add("spinner_hidden");
-      return data;
-    })
-    .catch((error) => {
-      spinner.classList.add("spinner_hidden");
-      alert(error.message);
-    });
+      return response.json();
+    }
+    throw new Error("Failed to load data");
+  });
 
 const renderRepos = (reposUrl) => {
   fetch(reposUrl)
@@ -52,7 +44,12 @@ const renderUserData = (userData) => {
 const onSearchUser = () => {
   const userName = userNameInputElem.value;
   spinner.classList.remove("spinner_hidden");
-  fetchUserData(userName).then((userData) => renderUserData(userData));
+  fetchUserData(userName)
+    .then((userData) => renderUserData(userData))
+    .catch((error) => {
+      spinner.classList.add("spinner_hidden");
+      alert(error.message);
+    });
 };
 showUserButtonELem.addEventListener("click", () => {
   onSearchUser();
