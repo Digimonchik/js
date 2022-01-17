@@ -14,7 +14,7 @@ const fetchUserData = (userName) =>
       if (response.status === 200) {
         return response.json();
       }
-      throw new Error("No data");
+      throw new Error("Failed to load data");
     })
     .then((data) => {
       spinner.classList.add("spinner_hidden");
