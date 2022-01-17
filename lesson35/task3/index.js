@@ -7,7 +7,7 @@ const spinner = document.querySelector(".spinner");
 const showUserButtonELem = document.querySelector(".name-form__btn");
 const userNameInputElem = document.querySelector(".name-form__input");
 
-userAvatarElem.src = "https://avatars3.githubusercontent.com/u10002";
+userAvatarElem.src = "https://avatars3.githubusercontent.com/u10001";
 const fetchUserData = (userName) =>
   fetch(`https://api.github.com/users/${userName}`).then((response) => {
     if (response.status === 200) {
