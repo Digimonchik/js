@@ -18,7 +18,6 @@ export const renderUserRepos = (arr) => {
 
 export const renderUserData = (userData) => {
   const { avatar_url, name, location } = userData;
-  console.log(avatar_url);
   userAvatarElem.src = avatar_url;
   userNameElem.textContent = name;
   userLocationElem.textContent = location ? `from ${location}` : "";
