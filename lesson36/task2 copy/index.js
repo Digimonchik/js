@@ -1,10 +1,14 @@
 import { onSearchUser } from "./src/onsearchUser.js";
+import { renderUserData } from "./src/renderData.js";
 
-const userAvatarElem = document.querySelector(".user__avatar");
 const showUserButtonELem = document.querySelector(".name-form__btn");
 
-userAvatarElem.src = "https://avatars3.githubusercontent.com/u10001";
-
+const defaultUser = {
+  avatar_url: "https://avatars3.githubusercontent.com/u10001",
+  name: "",
+  location: "",
+};
+renderUserData(defaultUser);
 showUserButtonELem.addEventListener("click", () => {
   onSearchUser();
 });
