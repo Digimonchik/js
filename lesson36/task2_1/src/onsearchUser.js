@@ -37,7 +37,7 @@ export const onSearchUser = async () => {
     const reposList = await fetchUserRepos(userData.repos_url);
     renderUserRepos(reposList);
   } catch (err) {
-    alert(err);
+    alert("Failed to load data");
   } finally {
     hideSpinner();
   }
